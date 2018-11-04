@@ -25,12 +25,12 @@ class QuestionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(model.quizIndex)
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
             self.loadData()
         })
         //        loadData()
-        print(model.quizIndex)
     }
     
     private func loadData() {
