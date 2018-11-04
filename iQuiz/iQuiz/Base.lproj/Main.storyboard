@@ -126,13 +126,13 @@
                                         <rect key="frame" x="169.5" y="151" width="36" height="150.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4oA-FQ-mzu">
-                                        <rect key="frame" x="60" y="301.5" width="255" height="151"/>
+                                        <rect key="frame" x="36" y="301.5" width="303" height="151"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qv4-Wz-fK4">
-                                                <rect key="frame" x="0.0" y="0.0" width="255" height="75.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="75.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIu-hH-1da">
-                                                        <rect key="frame" x="0.0" y="16" width="125" height="43.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="BIu-hH-1da">
+                                                        <rect key="frame" x="0.0" y="16" width="149" height="43.5"/>
                                                         <state key="normal" title="Option 1"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -146,8 +146,8 @@
                                                             <action selector="btnChoice:" destination="cty-gC-xQj" eventType="touchUpInside" id="eS9-5B-igM"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-y5-eL2">
-                                                        <rect key="frame" x="130" y="16" width="125" height="43.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-y5-eL2">
+                                                        <rect key="frame" x="154" y="16" width="149" height="43.5"/>
                                                         <state key="normal" title="Option 2"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -174,10 +174,10 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WW6-z2-lxs">
-                                                <rect key="frame" x="0.0" y="75.5" width="255" height="75.5"/>
+                                                <rect key="frame" x="0.0" y="75.5" width="303" height="75.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZe-PS-z8u">
-                                                        <rect key="frame" x="0.0" y="16" width="125" height="43.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QZe-PS-z8u">
+                                                        <rect key="frame" x="0.0" y="16" width="149" height="43.5"/>
                                                         <state key="normal" title="Option 3"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -191,8 +191,8 @@
                                                             <action selector="btnChoice:" destination="cty-gC-xQj" eventType="touchUpInside" id="OBj-Os-aSd"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ur3-o1-0UW">
-                                                        <rect key="frame" x="130" y="16" width="125" height="43.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ur3-o1-0UW">
+                                                        <rect key="frame" x="154" y="16" width="149" height="43.5"/>
                                                         <state key="normal" title="Option 4"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -229,9 +229,9 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="4oA-FQ-mzu" firstAttribute="leading" secondItem="tOh-X1-3GL" secondAttribute="leading" constant="60" id="HgR-xJ-Iy5"/>
+                                    <constraint firstItem="4oA-FQ-mzu" firstAttribute="leading" secondItem="tOh-X1-3GL" secondAttribute="leading" constant="36" id="HgR-xJ-Iy5"/>
                                     <constraint firstItem="xig-qS-RLP" firstAttribute="leading" secondItem="tOh-X1-3GL" secondAttribute="leading" constant="60" id="d4U-dU-1xf"/>
-                                    <constraint firstAttribute="trailing" secondItem="4oA-FQ-mzu" secondAttribute="trailing" constant="60" id="vyn-tf-SVV"/>
+                                    <constraint firstAttribute="trailing" secondItem="4oA-FQ-mzu" secondAttribute="trailing" constant="36" id="vyn-tf-SVV"/>
                                     <constraint firstAttribute="trailing" secondItem="xig-qS-RLP" secondAttribute="trailing" constant="60" id="w89-h4-ucb"/>
                                 </constraints>
                             </stackView>
@@ -274,7 +274,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zTg-wS-Qct">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcz-Ra-KlV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcz-Ra-KlV">
                                         <rect key="frame" x="60" y="0.0" width="255" height="151"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -287,13 +287,13 @@
                                         <rect key="frame" x="74.5" y="301.5" width="226" height="151"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Right or Wrong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqg-Tg-Wrq">
-                                                <rect key="frame" x="61.5" y="0.0" width="103.5" height="117.5"/>
+                                                <rect key="frame" x="61.5" y="0.0" width="103.5" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is the Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bar-D3-1KM">
-                                                <rect key="frame" x="0.0" y="117.5" width="226" height="33.5"/>
+                                                <rect key="frame" x="0.0" y="18" width="226" height="133"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -435,7 +435,8 @@
         <image name="dog" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9U4-X1-QkF"/>
-        <segue reference="EU0-pN-Gw9"/>
+        <segue reference="Puj-N8-59j"/>
+        <segue reference="bD1-0g-SIM"/>
+        <segue reference="PYT-2C-s8N"/>
     </inferredMetricsTieBreakers>
 </document>

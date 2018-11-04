@@ -28,6 +28,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.present(alert, animated: true, completion: nil)
     }
     
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        model.quizIndex = indexPath.row
+        print(model.quizIndex)
+        tableView.deselectRow(at: indexPath, animated: true)
+        print(model.quizIndex)
+    }
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.data.count
     }
@@ -37,8 +44,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.cellTitle.text = model.data[indexPath.row].title
         cell.cellImage.image = model.data[indexPath.row].image
         cell.cellDescript.text = model.data[indexPath.row].descript
-        model.quizIndex = indexPath.row
-        print(model.quizIndex)
         return cell
     }
 }
