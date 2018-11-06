@@ -27,7 +27,7 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         print(model.quizIndex)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15, execute: {
             self.loadData()
         })
 
@@ -44,6 +44,8 @@ class QuestionViewController: UIViewController {
             model.choiceIndex = choiceSelected
             performSegue(withIdentifier: "answerSegue", sender: self)
         } else if (sender.direction == .right) {
+            model.questionIndex = 0
+            model.countCorrect = 0
             performSegue(withIdentifier: "backSegue", sender: self)
         }
     }

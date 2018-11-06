@@ -35,9 +35,12 @@ class AnswerViewController: UIViewController {
         if (sender.direction == .left) {
             if model.questionIndex == model.data[model.quizIndex].questions.count {
                 performSegue(withIdentifier: "finishedSegue", sender: self)
+            } else {
+                performSegue(withIdentifier: "questionSegue", sender: self)
             }
-            performSegue(withIdentifier: "questionSegue", sender: self)
         } else if (sender.direction == .right) {
+            model.questionIndex = 0
+            model.countCorrect = 0
             performSegue(withIdentifier: "backSegue", sender: self)
         }
     }
