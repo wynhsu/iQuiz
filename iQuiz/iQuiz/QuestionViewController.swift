@@ -30,9 +30,24 @@ class QuestionViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
             self.loadData()
         })
-        //        loadData()
+
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
+        swipeLeft.direction = .left
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeLeft)
+        self.view.addGestureRecognizer(swipeRight)
     }
     
+    @objc func swipeGesture(sender: UISwipeGestureRecognizer) {
+        if (sender.direction == .left && choiceSelected != "") {
+            model.choiceIndex = choiceSelected
+            performSegue(withIdentifier: "answerSegue", sender: self)
+        } else if (sender.direction == .right) {
+            performSegue(withIdentifier: "backSegue", sender: self)
+        }
+    }
+
     private func loadData() {
         let currentQuiz = model.data[model.quizIndex]
         let currentQuestion = model.questionIndex

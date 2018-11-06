@@ -20,8 +20,26 @@ class AnswerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         loadData()
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
+        swipeLeft.direction = .left
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeLeft)
+        self.view.addGestureRecognizer(swipeRight)
+    }
+    
+    @objc func swipeGesture(sender: UISwipeGestureRecognizer) {
+        model.questionIndex += 1
+        if (sender.direction == .left) {
+            if model.questionIndex == model.data[model.quizIndex].questions.count {
+                performSegue(withIdentifier: "finishedSegue", sender: self)
+            }
+            performSegue(withIdentifier: "questionSegue", sender: self)
+        } else if (sender.direction == .right) {
+            performSegue(withIdentifier: "backSegue", sender: self)
+        }
     }
     
     private func loadData() {
