@@ -122,8 +122,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="zBD-bu-gKq">
-                                        <rect key="frame" x="169.5" y="151" width="36" height="150.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kfZ-sY-F7T">
+                                        <rect key="frame" x="60" y="151" width="255" height="150.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4oA-FQ-mzu">
                                         <rect key="frame" x="36" y="301.5" width="303" height="151"/>
@@ -231,7 +231,9 @@
                                 <constraints>
                                     <constraint firstItem="4oA-FQ-mzu" firstAttribute="leading" secondItem="tOh-X1-3GL" secondAttribute="leading" constant="36" id="HgR-xJ-Iy5"/>
                                     <constraint firstItem="xig-qS-RLP" firstAttribute="leading" secondItem="tOh-X1-3GL" secondAttribute="leading" constant="60" id="d4U-dU-1xf"/>
+                                    <constraint firstItem="kfZ-sY-F7T" firstAttribute="leading" secondItem="tOh-X1-3GL" secondAttribute="leading" constant="60" id="u9p-sP-9oM"/>
                                     <constraint firstAttribute="trailing" secondItem="4oA-FQ-mzu" secondAttribute="trailing" constant="36" id="vyn-tf-SVV"/>
+                                    <constraint firstAttribute="trailing" secondItem="kfZ-sY-F7T" secondAttribute="trailing" constant="60" id="vzC-ww-kbR"/>
                                     <constraint firstAttribute="trailing" secondItem="xig-qS-RLP" secondAttribute="trailing" constant="60" id="w89-h4-ucb"/>
                                 </constraints>
                             </stackView>
@@ -253,7 +255,6 @@
                         <outlet property="choiceOne" destination="BIu-hH-1da" id="KYn-xZ-awY"/>
                         <outlet property="choiceThree" destination="QZe-PS-z8u" id="oJ3-kp-sr7"/>
                         <outlet property="choiceTwo" destination="a7i-y5-eL2" id="B9d-0u-Me9"/>
-                        <outlet property="questionImg" destination="zBD-bu-gKq" id="WtZ-cW-gyz"/>
                         <outlet property="quizQuestion" destination="xig-qS-RLP" id="AXQ-ws-s1I"/>
                         <outlet property="quizTitle" destination="fal-ya-LAi" id="ZwT-Z9-Lza"/>
                         <segue destination="bSE-q6-COH" kind="show" identifier="answerSegue" id="Puj-N8-59j"/>
@@ -280,25 +281,29 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="d3y-Jd-ILS">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDy-Jx-JqP">
                                         <rect key="frame" x="60" y="151" width="255" height="150.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aVy-H2-f4w">
-                                        <rect key="frame" x="74.5" y="301.5" width="226" height="151"/>
+                                        <rect key="frame" x="70.5" y="301.5" width="234.5" height="151"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Right or Wrong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqg-Tg-Wrq">
-                                                <rect key="frame" x="61.5" y="0.0" width="103.5" height="18"/>
+                                                <rect key="frame" x="65.5" y="0.0" width="103.5" height="122"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is the Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bar-D3-1KM">
-                                                <rect key="frame" x="0.0" y="18" width="226" height="133"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="This is the Answer" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bar-D3-1KM">
+                                                <rect key="frame" x="20" y="122" width="194.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bar-D3-1KM" secondAttribute="trailing" constant="20" id="HeE-Uh-BQ5"/>
+                                            <constraint firstItem="bar-D3-1KM" firstAttribute="leading" secondItem="aVy-H2-f4w" secondAttribute="leading" constant="20" id="duh-BC-HIv"/>
+                                        </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMO-Cd-CNg">
                                         <rect key="frame" x="171.5" y="452.5" width="32" height="150.5"/>
@@ -309,9 +314,9 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="d3y-Jd-ILS" firstAttribute="leading" secondItem="zTg-wS-Qct" secondAttribute="leading" constant="60" id="6ls-Fa-7Rg"/>
                                     <constraint firstItem="fcz-Ra-KlV" firstAttribute="leading" secondItem="zTg-wS-Qct" secondAttribute="leading" constant="60" id="9IG-4n-XmA"/>
-                                    <constraint firstAttribute="trailing" secondItem="d3y-Jd-ILS" secondAttribute="trailing" constant="60" id="umT-6u-wLa"/>
+                                    <constraint firstItem="fDy-Jx-JqP" firstAttribute="leading" secondItem="zTg-wS-Qct" secondAttribute="leading" constant="60" id="E7J-DT-mIE"/>
+                                    <constraint firstAttribute="trailing" secondItem="fDy-Jx-JqP" secondAttribute="trailing" constant="60" id="ZtR-7U-hed"/>
                                     <constraint firstAttribute="trailing" secondItem="fcz-Ra-KlV" secondAttribute="trailing" constant="60" id="wBn-3B-dV7"/>
                                 </constraints>
                             </stackView>
@@ -342,7 +347,6 @@
                     </view>
                     <connections>
                         <outlet property="questionAnswer" destination="bar-D3-1KM" id="lXW-9I-yJj"/>
-                        <outlet property="questionImg" destination="d3y-Jd-ILS" id="FTN-09-rNj"/>
                         <outlet property="quizQuestion" destination="fcz-Ra-KlV" id="ed7-c0-xp3"/>
                         <outlet property="quizTitle" destination="vgb-wU-YTD" id="uyL-Eo-tgK"/>
                         <outlet property="result" destination="Rqg-Tg-Wrq" id="Hhl-LP-sUV"/>
@@ -432,10 +436,9 @@
     </scenes>
     <resources>
         <image name="congrats" width="375" height="282"/>
-        <image name="dog" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9U4-X1-QkF"/>
-        <segue reference="PYT-2C-s8N"/>
+        <segue reference="bD1-0g-SIM"/>
+        <segue reference="EU0-pN-Gw9"/>
     </inferredMetricsTieBreakers>
 </document>

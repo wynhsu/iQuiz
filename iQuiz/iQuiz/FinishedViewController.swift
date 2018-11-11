@@ -18,8 +18,10 @@ class FinishedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        quizTitle.title = model.data[model.quizIndex].title
-        numberCorrect.text = String(model.countCorrect) + " out of 2 correct"
+        quizTitle.title = model.quizData[model.quizIndex].title
+        let correct = String(model.countCorrect)
+        let total = String(model.quizData[model.quizIndex].questions!.count)
+        numberCorrect.text =  "\(correct) out of \(total) correct"
         numberCorrect.textColor = UIColor(red: 1.0, green: 24.0/255, blue: 85.0/255, alpha: 1.0)
     }
 

@@ -14,7 +14,6 @@ class QuestionViewController: UIViewController {
 
     @IBOutlet weak var quizTitle: UINavigationItem!
     @IBOutlet weak var quizQuestion: UILabel!
-    @IBOutlet weak var questionImg: UIImageView!
     @IBOutlet weak var choiceOne: UIButton!
     @IBOutlet weak var choiceTwo: UIButton!
     @IBOutlet weak var choiceThree: UIButton!
@@ -25,44 +24,42 @@ class QuestionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(model.quizIndex)
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15, execute: {
             self.loadData()
         })
 
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
-        swipeLeft.direction = .left
-        swipeRight.direction = .right
-        self.view.addGestureRecognizer(swipeLeft)
-        self.view.addGestureRecognizer(swipeRight)
+//        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
+//        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
+//        swipeLeft.direction = .left
+//        swipeRight.direction = .right
+//        self.view.addGestureRecognizer(swipeLeft)
+//        self.view.addGestureRecognizer(swipeRight)
     }
     
-    @objc func swipeGesture(sender: UISwipeGestureRecognizer) {
-        if (sender.direction == .left && choiceSelected != "") {
-            model.choiceIndex = choiceSelected
-            performSegue(withIdentifier: "answerSegue", sender: self)
-        } else if (sender.direction == .right) {
-            model.questionIndex = 0
-            model.countCorrect = 0
-            performSegue(withIdentifier: "backSegue", sender: self)
-        }
-    }
+//    @objc func swipeGesture(sender: UISwipeGestureRecognizer) {
+//        if (sender.direction == .left && choiceSelected != "") {
+//            model.choiceIndex = choiceSelected
+//            performSegue(withIdentifier: "answerSegue", sender: self)
+//        } else if (sender.direction == .right) {
+//            model.questionIndex = 0
+//            model.countCorrect = 0
+//            performSegue(withIdentifier: "backSegue", sender: self)
+//        }
+//    }
 
     private func loadData() {
-        let currentQuiz = model.data[model.quizIndex]
-        let currentQuestion = model.questionIndex
+        let currentQuiz = model.quizData[model.quizIndex]
+        let currentQuestion = currentQuiz.questions![model.questionIndex]
         quizTitle.title = currentQuiz.title
-        quizQuestion.text = currentQuiz.questions[currentQuestion]
-        questionImg.image = currentQuiz.qImages[currentQuestion]
-        choiceOne.setTitle(currentQuiz.choices[currentQuestion][0], for: .normal)
+        quizQuestion.text = currentQuestion.text
+        choiceOne.setTitle(currentQuestion.answers![0], for: .normal)
         choiceOne.layer.borderColor = defaultColor
-        choiceTwo.setTitle(currentQuiz.choices[currentQuestion][1], for: .normal)
+        choiceTwo.setTitle(currentQuestion.answers![1], for: .normal)
         choiceTwo.layer.borderColor = defaultColor
-        choiceThree.setTitle(currentQuiz.choices[currentQuestion][2], for: .normal)
+        choiceThree.setTitle(currentQuestion.answers![2], for: .normal)
         choiceThree.layer.borderColor = defaultColor
-        choiceFour.setTitle(currentQuiz.choices[currentQuestion][3], for: .normal)
+        choiceFour.setTitle(currentQuestion.answers![3], for: .normal)
         choiceFour.layer.borderColor = defaultColor
     }
     
