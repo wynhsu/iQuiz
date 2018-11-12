@@ -28,25 +28,7 @@ class QuestionViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15, execute: {
             self.loadData()
         })
-
-//        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
-//        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeGesture))
-//        swipeLeft.direction = .left
-//        swipeRight.direction = .right
-//        self.view.addGestureRecognizer(swipeLeft)
-//        self.view.addGestureRecognizer(swipeRight)
     }
-    
-//    @objc func swipeGesture(sender: UISwipeGestureRecognizer) {
-//        if (sender.direction == .left && choiceSelected != "") {
-//            model.choiceIndex = choiceSelected
-//            performSegue(withIdentifier: "answerSegue", sender: self)
-//        } else if (sender.direction == .right) {
-//            model.questionIndex = 0
-//            model.countCorrect = 0
-//            performSegue(withIdentifier: "backSegue", sender: self)
-//        }
-//    }
 
     private func loadData() {
         let currentQuiz = model.quizData[model.quizIndex]
@@ -79,7 +61,6 @@ class QuestionViewController: UIViewController {
         btnStyleReset()
         sender.layer.backgroundColor = defaultColor
         sender.setTitleColor(UIColor.white, for: .normal)
-        print(choiceSelected)
     }
     
     @IBAction func submitChoice(_ sender: Any) {

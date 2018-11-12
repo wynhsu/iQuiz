@@ -12,23 +12,23 @@ import UIKit
 class QuizModel: NSObject {
     static let appData = QuizModel()
     
-    public struct Category: Decodable {
+    public struct Category: Codable {
         let title: String?
         let desc: String?
         let questions: [Question]?
 
     }
     
-    public struct Question: Decodable {
+    public struct Question: Codable {
         let text: String?
         let answer: String?
         let answers: [String]?
     }
-    
+
     open var quizIndex: Int = 0
     open var questionIndex: Int = 0
     open var choiceIndex: String = ""
     open var countCorrect: Int = 0
-    open var quizData: [QuizModel.Category] = []
+    open var quizData = [QuizModel.Category]()
 
 }
